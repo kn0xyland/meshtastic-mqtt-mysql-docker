@@ -9,8 +9,8 @@ services:
       DB_NAME: meshtastic
       MQTT_HOST: mqtt
       MQTT_PORT: 1883
-      MQTT_NODEID: "!da56f2a8"
-      MQTT_TOPIC: "Meshtastic/2/json/Hive/"
+      MQTT_NODEID: "!daXXXXX"
+      MQTT_TOPIC: "Meshtastic/2/json/LongFast/"
     ports:
       - "8080:80"
     depends_on:
