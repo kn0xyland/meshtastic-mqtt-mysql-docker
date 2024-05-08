@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS meshtastic;
+CREATE USER IF NOT EXISTS 'meshtastic'@'%' IDENTIFIED BY '123456acbde';
+GRANT ALL PRIVILEGES ON meshtastic.* TO 'meshtastic'@'%';
+FLUSH PRIVILEGES;

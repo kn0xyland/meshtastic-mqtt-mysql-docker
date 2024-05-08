@@ -1,0 +1,53 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      DB_HOST: db
+      DB_USER: meshtastic
+      DB_PASSWORD: 123456acbde
+      DB_NAME: meshtastic
+      MQTT_HOST: mqtt
+      MQTT_PORT: 1883
+      MQTT_NODEID: "!da56f2a8"
+      MQTT_TOPIC: "Meshtastic/2/json/Hive/"
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+      - mqtt
+    networks:
+      - mesh-network
+#    devices:
+#      - "/dev/ttyUSB0:/dev/ttyUSB0" # Uncomment this line if you want to use a Heltec v3 via Direct Attached USB
+
+  mqtt:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
+    user: root
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mqtt_data:/mosquitto/data
+    networks:
+      - mesh-network
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./meshtastic.sql:/docker-entrypoint-initdb.d/meshtastic.sql
+    networks:
+      - mesh-network
+
+networks:
+  mesh-network:
+
+volumes:
+  db_data:
+  mqtt_data:
