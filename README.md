@@ -1,8 +1,8 @@
 # Meshtastic Message Persistence using Docker Containers
 
-Containerised version of Brad Hughes Meshtastic-MQTT-MySQL application, full credits to Brad for his awesome solution for meshtastic message persistence! Link to 
+Containerised version of Brad Hughes Meshtastic-MQTT-MySQL application, full credits to Brad for his awesome solution for meshtastic message persistence! 
 
-Brads Repo here: https://github.com/brad28b/meshtastic-mqtt-mysql
+Link to Brads Repo here: https://github.com/brad28b/meshtastic-mqtt-mysql
 
 I saw an opportunity to containerise and simplify the deployment process using Docker ❤️ this also makes the solution portable between AMD64 & ARM.
 
