@@ -1,11 +1,15 @@
-Containerised version of Brad Hughes Meshtastic-MQTT-MySQL application. 
+# Meshtastic Message Persistence using Docker Containers
 
-Saw an opportunity to Containerise and simplify the deployment process using Docker ❤️
+Containerised version of Brad Hughes Meshtastic-MQTT-MySQL application, full credits to Brad for his awesome solution for meshtastic message persistence! Link to 
 
-The proceeding README is taken from Brad's readme, I've added a section detailing containerisation. Also checkout the ChangeLog for changes to Brad's original files, this was to make them docker-compose friendly.
+Brads Repo here: https://github.com/brad28b/meshtastic-mqtt-mysql
+
+I saw an opportunity to containerise and simplify the deployment process using Docker ❤️ this also makes the solution portable between AMD64 & ARM.
+
+The proceeding README is taken from Brad's readme, I've added a section at the end detailing containerisation. Also checkout the ChangeLog for changes to Brad's original files, this was to make them docker-compose friendly.
 
 Chur!
-
+Ben
 
 # meshtastic-mqtt-mysql
 This PHP-CLI script, which is run as a shell script daemon, runs permanently in the background, subscribes to the Meshtastic JSON topic on your MQTT server, captures messages delivered from the mesh via MQTT, and imports them into MySQL tables.
