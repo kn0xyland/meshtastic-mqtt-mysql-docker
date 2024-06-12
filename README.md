@@ -2,7 +2,7 @@
 
 ![InfraCost](./images/meshtastic-diagram.png)
 
-Containerised version of Brad Hughes Meshtastic-MQTT-MySQL application, full credits to Brad for his awesome solution for meshtastic message persistence! 
+Containerised version of Brad H's Meshtastic-MQTT-MySQL application, full credits to Brad for his awesome solution for meshtastic message persistence! 
 
 Link to Brads Repo here: https://github.com/brad28b/meshtastic-mqtt-mysql
 
